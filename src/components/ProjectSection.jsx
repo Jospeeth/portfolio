@@ -1,6 +1,7 @@
 import ProjectCard from "./ProjectCard";
-import { motion,useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { PROJECTS } from "../constans";
+import { INFORMATION } from "../constans";
 import { useRef } from "react";
 
 const ProjectsSection = () => {
@@ -15,13 +16,14 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="Projects">
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
+    <section id="Projects" className="pt-16">
+      <h2 className="text-6xl font-bold text-white mt-8 text-start">
         Projects
-        
-        
+
+
       </h2>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+      <p className="font-extralight my-8">{ INFORMATION.projectsInfo.description }</p>
+      <ul ref={ref} className="flex flex-wrap gap-8 justify-center md:gap-12">
         {PROJECTS.map((project, index) => (
           <motion.li
             key={index}

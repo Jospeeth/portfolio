@@ -7,7 +7,7 @@ import myRoom from "../assets/my-room.webp";
 const HeroSection = () => {
   return (
     <section className="lg:py-16">
-      <div className="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-12 ">
+     <div className="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-12 items-center justify-items-center">
         <div className="col-span-7 place-content-center text-center sm:text-left">
           <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl font-extrabold">
             <span className=" text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
@@ -50,14 +50,14 @@ const HeroSection = () => {
         </div>
 
         <div className="col-span-5">
-          <div className="block md:hidden">
+          <div className="block lg:hidden">
             <img
               src={myRoom}
               alt="Mobile Image"
               className="w-full h-[400px] object-cover"
             />
           </div>
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <Spline scene="https://prod.spline.design/lNwK-ueWrwZ3HSIv/scene.splinecode" />
           </div>
         </div>
