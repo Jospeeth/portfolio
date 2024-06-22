@@ -1,4 +1,4 @@
-export const TAB_DATA = [
+const TAB_DATA = [
   {
     title: "Skills",
     id: "skills",
@@ -11,7 +11,6 @@ export const TAB_DATA = [
       "● HTML",
       "● CSS",
       "● Git",
-
     ]
   },
   {
@@ -23,15 +22,15 @@ export const TAB_DATA = [
   },
 ];
 
-export const PROJECTS = [
+const PROJECTS = [
   {
     id: 1,
     title: "EduKids",
     description: "This is my portfolio website. It was built using Next.js, Tailwind CSS, and Framer Motion. It is a single-page application that showcases my skills",
     image: "https://nextjs-portfolio-mu-swart.vercel.app/_next/image?url=%2Fimages%2Fabout-image.png&w=640&q=75",
     technologies: ["Next.js", "Tailwind CSS", "Framer Motion"],
-    github: "AAAAA", 
-    previewUrl: "AAAAA",
+    github: "", 
+    previewUrl: "",
   },
   {
     id: 2,
@@ -39,8 +38,8 @@ export const PROJECTS = [
     description: "This is a weather application that allows users to search for the current weather in any city. It was built using React, Redux, and the OpenWeatherMap API.",
     image: "https://nextjs-portfolio-mu-swart.vercel.app/_next/image?url=%2Fimages%2Fabout-image.png&w=640&q=75",
     technologies: ["React", "Redux", "OpenWeatherMap API"],
-    github: "AAAAA", 
-    previewUrl: "AAAAA",
+    github: "", 
+    previewUrl: "",
   },
   {
     id: 3,
@@ -48,7 +47,25 @@ export const PROJECTS = [
     description: "This is a task manager application that allows users to create, edit, and delete tasks. It was built using React, Redux, Node.js, Express, and PostgreSQL.",
     image: "https://nextjs-portfolio-mu-swart.vercel.app/_next/image?url=%2Fimages%2Fabout-image.png&w=640&q=75",
     technologies: ["React", "Redux", "Node.js", "Express", "PostgreSQL"],
-    github: "AAAAA", 
-    previewUrl: "AAAAAA",
+    github: "", 
+    previewUrl: "",
   }
 ];
+
+const ACHIVEMENTSLIST = [
+  {
+    metric: "Projects",
+    value: "4",
+    postfix: "+",
+  },
+  {
+    metric: "Awards",
+    value: "2",
+  },
+  {
+    metric: "Years",
+    value: "4",
+  },
+];
+
+export { TAB_DATA, PROJECTS, ACHIVEMENTSLIST };

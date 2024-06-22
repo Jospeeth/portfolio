@@ -1,11 +1,11 @@
 import React from "react";
 
 const navBarLinks = [
-    { href: "#", title: "Home" },
-    { href: "#", title: "About" },
-    { href: "#", title: "Projects" },
-    { href: "#", title: "Contact" },
-    ];
+  { href: "#", title: "Home" },
+  { href: "#About", title: "About" },
+  { href: "#Projects", title: "Projects" },
+  { href: "#Contact", title: "Contact" },
+];
 
 function NavLinks({href, title}) {
   return (
