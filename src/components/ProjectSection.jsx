@@ -22,7 +22,9 @@ const ProjectsSection = () => {
 
 
       </h2>
-      <p className="font-extralight my-8">{ INFORMATION.projectsInfo.description }</p>
+      <div className="w-full flex">
+        <p className="font-extralight py-16 max-w-3xl leading-7 ">{INFORMATION.projectsInfo.description}</p>
+     </div>
       <ul ref={ref} className="flex flex-wrap gap-8 justify-center md:gap-12">
         {PROJECTS.map((project, index) => (
           <motion.li

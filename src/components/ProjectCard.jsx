@@ -12,8 +12,10 @@ const ProjectCard = ({
     <div className="bg-zinc-900 p-5 rounded-2xl sm:w-[360px] w-full ">
       <div
         className="h-52 md:h-72 rounded-t-xl relative group"
-        style={{ background: `url(${image})`, backgroundSize: "cover" }}
+  
       >
+        <img src={image} alt={title} className="w-full h-full object-cover rounded-t-xl" />
+      </div>
         <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500 ">
           <a
             href={git}
@@ -59,7 +61,7 @@ const ProjectCard = ({
             </svg>
           </a>
         </div>
-      </div>
+      
       <div className="text-white rounded-b-xl mt-3 bg-[#181818]py-6 px-4">
         <h5 className="text-xl font-semibold mb-2">{title}</h5>
         <p className="text-[#ADB7BE] text-[14px]  my-2">

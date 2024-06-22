@@ -1,3 +1,5 @@
+import {tuneWave} from "./assets/";
+
 const TAB_DATA = [
   {
     title: "Skills",
@@ -45,7 +47,7 @@ const PROJECTS = [
     id: 3,
     title: "TuneWave",
     description: "This is a task manager application that allows users to create, edit, and delete tasks. It was built using React, Redux, Node.js, Express, and PostgreSQL.",
-    image: "",
+    image: tuneWave,
     technologies: ["React", "Redux", "Node.js", "Express", "PostgreSQL"],
     github: "", 
     previewUrl: "",
