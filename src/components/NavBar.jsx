@@ -1,9 +1,27 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { navBarLinks, NavLinks } from "./modules/NavLink";
 import MenuOverlay from "./modules/MenuOverlay";
 
 function NavBar() {
   const [navbarOpen, setNavbarOpen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setNavbarOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const handleLinkClick = () => {
+    setNavbarOpen(false);
+  };
   return (
     <nav className=" fixed top-0 left-0 right-0 z-10  bg-gradient-to-r  from-purple-400/70 to-purple-500   bg-opacity-90 mx-auto">
       <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
@@ -13,8 +31,8 @@ function NavBar() {
         <div className=" mobile-menu block md:hidden">
           {!navbarOpen ? (
             <button
-              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
-              onClick={() => setNavbarOpen(true)}
+            className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white transform transition-transform duration-200 ease-in-out hover:scale-110 active:scale-90"
+            onClick={() => setNavbarOpen(true)}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -32,8 +50,10 @@ function NavBar() {
               </svg>
             </button>
           ) : (
-            <button className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
-            onClick={() => setNavbarOpen(false)}>
+            <button
+            className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white transform transition-transform duration-200 ease-in-out hover:scale-110 active:scale-90"
+            onClick={() => setNavbarOpen(false)}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -46,7 +66,6 @@ function NavBar() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   d="M6 18 18 6M6 6l12 12"
-                 
                 />
               </svg>
             </button>
