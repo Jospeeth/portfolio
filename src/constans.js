@@ -1,4 +1,4 @@
-import {tuneWave} from "./assets/";
+import {tuneWave, eduKids} from "./assets/";
 
 const TAB_DATA = [
   {
@@ -28,30 +28,34 @@ const PROJECTS = [
   {
     id: 1,
     title: "EduKids",
-    description: "This is my portfolio website. It was built using Next.js, Tailwind CSS, and Framer Motion. It is a single-page application that showcases my skills",
-    image: "https://nextjs-portfolio-mu-swart.vercel.app/_next/image?url=%2Fimages%2Fabout-image.png&w=640&q=75",
-    technologies: ["Next.js", "Tailwind CSS", "Framer Motion"],
-    github: "", 
+    description:
+      "This is Educational application for schools, allowing students and teachers to access resources and tools to learn and teach about responsible energy use.",
+    image: eduKids,
+    technologies: ["React.js", "Tailwind CSS", "Express.js", "SQL"],
+    github: "",
     previewUrl: "",
   },
   {
     id: 2,
     title: "Artiheal",
-    description: "This is a weather application that allows users to search for the current weather in any city. It was built using React, Redux, and the OpenWeatherMap API.",
-    image: "https://nextjs-portfolio-mu-swart.vercel.app/_next/image?url=%2Fimages%2Fabout-image.png&w=640&q=75",
+    description:
+      "This is a weather application that allows users to search for the current weather in any city. It was built using React, Redux, and the OpenWeatherMap API.",
+    image:
+      "https://nextjs-portfolio-mu-swart.vercel.app/_next/image?url=%2Fimages%2Fabout-image.png&w=640&q=75",
     technologies: ["React", "Redux", "OpenWeatherMap API"],
-    github: "", 
+    github: "",
     previewUrl: "",
   },
   {
     id: 3,
     title: "TuneWave",
-    description: "This is a task manager application that allows users to create, edit, and delete tasks. It was built using React, Redux, Node.js, Express, and PostgreSQL.",
+    description:
+      "This project is a simple music player application. It allows users to play music tracks, navigate through the playlist, and control playback options.",
     image: tuneWave,
-    technologies: ["React", "Redux", "Node.js", "Express", "PostgreSQL"],
-    github: "", 
+    technologies: ["HTML", "Tailwind", "JavaScript", "Vite"],
+    github: "",
     previewUrl: "",
-  }
+  },
 ];
 
 const ACHIVEMENTSLIST = [
