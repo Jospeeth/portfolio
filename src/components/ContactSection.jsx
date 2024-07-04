@@ -1,13 +1,33 @@
 import GithubIcon from "../../public/github-icon.svg";
 import LinkedinIcon from "../../public/linkedin-icon.svg";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from '@emailjs/browser';
 const EmailSection = () => {
     const [emailSubmitted, setEmailSubmitted] = useState(false);
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-
+    emailjs
+        .sendForm('service_022mbil', 'template_ati2j8n', form.current, {
+          publicKey: 'in1WaQJQfG3hBqp5D',
+          message: form.current.message.value,
+          subject: form.current.subject.value,
+          email: form.current.email.value
+      })
+      .then(
+        () => {
+              console.log('SUCCESS!');
+              setEmailSubmitted(true)
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
     return (
         <section
-            id="contact"
+            id="Contact"
             className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
         >
             <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
@@ -36,7 +56,7 @@ const EmailSection = () => {
                         Email sent successfully!
                     </p>
                 ) : (
-                    <form className="flex flex-col">
+                        <form className="flex flex-col"  ref={form} onSubmit={sendEmail }>
                         <div className="mb-6">
                             <label
                                 htmlFor="email"

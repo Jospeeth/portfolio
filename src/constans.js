@@ -75,13 +75,18 @@ const ACHIVEMENTSLIST = [
 ];
 
 const INFORMATION = {
-   projectsInfo: {
-    description: "In this section, you'll find a selection of my most relevant projects, showcasing where I've applied my skills in various domains. Each project highlights my expertise in web development, software engineering, and problem-solving, demonstrating my ability to deliver innovative solutions and achieve tangible results. Explore these projects to see how I leverage technologies like React, Node.js, and MySQL to create impactful and efficient applications."
+  projectsInfo: {
+    description:
+      "In this section, you'll find a selection of my most relevant projects, showcasing where I've applied my skills in various domains. Each project highlights my expertise in web development, software engineering, and problem-solving, demonstrating my ability to deliver innovative solutions and achieve tangible results. Explore these projects to see how I leverage technologies like React, Node.js, and MySQL to create impactful and efficient applications.",
   },
-   PersonalInfo: {
-    description: "I am a software engineer with a passion for web development and a strong foundation in computer science. I specialize in building web applications using modern technologies like React, Node.js, and SQL. With a keen eye for detail and a commitment to quality, I strive to deliver exceptional results that meet the needs of users and clients. My goal is to leverage my technical skills and creativity to create innovative solutions that drive business growth and enhance user experiences."
+  personalInfo: {
+    description:
+      "Hello coder! 👋 My name is Jose Pertuz and I am a junior front-end developer 💻. I'm currently studying System Engineering at Universidad Simón Bolívar📚.",
   },
-  
-  }
+  aboutMe: {
+    description:
+      "I enrolled in university in 2021 🎓, where I began my journey in technology. During the first four semesters, I completed several projects using vanilla Java ☕. Seeking to broaden my experience, I ventured into web development in the first semester of 2023 🌐. I created small projects, such as a to-do list application 📝, and contributed to the Artiheal project, a final-year initiative 🛠️. Currently, I am learning React ⚛️ and working on my first project using the MERN stack 💻.",
+  },
+};
 
 export { TAB_DATA, PROJECTS, ACHIVEMENTSLIST,INFORMATION };

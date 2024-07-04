@@ -2,7 +2,7 @@ import Spline from "@splinetool/react-spline";
 import { TypeAnimation } from "react-type-animation";
 import {ACHIVEMENTSLIST} from "../constans";
 import myRoom from "../assets/my-room.webp";
-
+import {INFORMATION} from "../constans";
 
 const HeroSection = () => {
   return (
@@ -30,8 +30,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-primary text-base sm:text-lg lg:text-xl mb-6">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe
-            aliquam repellat aspernatur nisi, nulla esse mollitia quas eligendi
+           {INFORMATION.personalInfo.description}
           </p>
           <div>
             <button className="px-6 py-3 rounded-full w-full sm:w-fit  mr-4 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-200 text-white">
