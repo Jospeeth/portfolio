@@ -4,24 +4,28 @@ import { useState, useRef } from "react";
 import emailjs from '@emailjs/browser';
 const EmailSection = () => {
     const [emailSubmitted, setEmailSubmitted] = useState(false);
-  const form = useRef();
+    const form = useRef();
+    
+    console.log( import.meta.env)
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-        .sendForm('service_022mbil', 'template_ati2j8n', form.current, {
-          publicKey: 'in1WaQJQfG3hBqp5D',
-          message: form.current.message.value,
-          subject: form.current.subject.value,
-          email: form.current.email.value
+   emailjs.sendForm(
+            import.meta.env.VITE_APP_SERVICE_ID, 
+            import.meta.env.VITE_APP_TEMPLATE_ID, 
+            form.current, 
+            {
+                publicKey: import.meta.env.VITE_APP_PUBLIC_KEY,
+                message: form.current.message.value,
+                subject: form.current.subject.value,
+                email: form.current.email.value
       })
       .then(
         () => {
-              console.log('SUCCESS!');
               setEmailSubmitted(true)
         },
         (error) => {
-          console.log('FAILED...', error.text);
+          console.log( error.text);
         },
       );
   };
