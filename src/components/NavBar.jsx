@@ -23,7 +23,7 @@ function NavBar() {
     setNavbarOpen(false);
   };
   return (
-    <nav className=" fixed top-0 left-0 right-0 z-10  bg-gradient-to-r  from-purple-400/70 to-purple-500   bg-opacity-90 mx-auto">
+    <nav className=" fixed top-0 left-0 right-0 z-10  bg-gradient-to-r bg-gray-800/80   bg-opacity-90 mx-auto">
       <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
         <a href="#" className="text-2xl md:text-5xl font-semibold">
           Jospeeth 

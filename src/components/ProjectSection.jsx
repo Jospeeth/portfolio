@@ -1,4 +1,4 @@
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "./modules/ProjectCard";
 import { motion, useInView } from "framer-motion";
 import { PROJECTS } from "../constans";
 import { INFORMATION } from "../constans";

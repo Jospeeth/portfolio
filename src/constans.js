@@ -1,4 +1,4 @@
-import {tuneWave, eduKids} from "./assets/";
+import {tuneWave, eduKids, artiHeal} from "./assets/";
 
 const TAB_DATA = [
   {
@@ -31,20 +31,19 @@ const PROJECTS = [
     description:
       "This is Educational application for schools, allowing students and teachers to access resources and tools to learn and teach about responsible energy use.",
     image: eduKids,
-    technologies: ["React.js", "Tailwind CSS", "Express.js", "SQL"],
-    github: "",
-    previewUrl: "",
+    technologies: ["React.js", "Tailwind", "Express.js", "SQL"],
+    github: "https://github.com/Jospeeth/EduKids",
+    previewUrl: "https://edukids-1.vercel.app",
   },
   {
     id: 2,
     title: "Artiheal",
     description:
-      "This is a weather application that allows users to search for the current weather in any city. It was built using React, Redux, and the OpenWeatherMap API.",
-    image:
-      "https://nextjs-portfolio-mu-swart.vercel.app/_next/image?url=%2Fimages%2Fabout-image.png&w=640&q=75",
-    technologies: ["React", "Redux", "OpenWeatherMap API"],
-    github: "",
-    previewUrl: "",
+      "A comprehensive health follow-up platform that allows users to choose their daily health routine and keep up with details about the state of their health with an intuitive dashboard.",
+    image: artiHeal,
+    technologies: ["React", "Node.js", "mongoDB", "Tailwind"],
+    github: "https://github.com/VinuSion/Artiheal",
+    previewUrl: "https://artiheal.onrender.com",
   },
   {
     id: 3,
@@ -53,8 +52,8 @@ const PROJECTS = [
       "This project is a simple music player application. It allows users to play music tracks, navigate through the playlist, and control playback options.",
     image: tuneWave,
     technologies: ["HTML", "Tailwind", "JavaScript", "Vite"],
-    github: "",
-    previewUrl: "",
+    github: "https://github.com/Jospeeth/TuneWave",
+    previewUrl: "https://tunewavee.netlify.app/",
   },
 ];
 
