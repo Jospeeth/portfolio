@@ -39,7 +39,7 @@ const PROJECTS = [
     id: 2,
     title: "Artiheal",
     description:
-      "A comprehensive health follow-up platform that allows users to choose their daily health routine and keep up with details about the state of their health with an intuitive dashboard.",
+      "An intuitive health management platform for tracking daily routines and monitoring detailed health updates via a user-friendly dashboard.",
     image: artiHeal,
     technologies: ["React", "Node.js", "mongoDB", "Tailwind"],
     github: "https://github.com/VinuSion/Artiheal",
