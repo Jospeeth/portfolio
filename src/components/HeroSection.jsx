@@ -9,7 +9,7 @@ const HeroSection = () => {
     <section className="lg:py-16">
      <div className="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-12 items-center justify-items-center">
         <div className="col-span-7 place-content-center text-center sm:text-left">
-          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl font-extrabold">
+          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-7xl font-extrabold">
             <span className=" text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
               Hello, I'm{" "}
             </span>
@@ -25,7 +25,7 @@ const HeroSection = () => {
                 1000,
               ]}
               wrapper="span"
-              speed={10}
+              speed={15}
               repeat={Infinity}
             />
           </h1>
