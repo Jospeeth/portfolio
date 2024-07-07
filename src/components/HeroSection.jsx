@@ -33,7 +33,7 @@ const HeroSection = () => {
           <div className=" flex gap-x-4">
             <ButtonLink
               text="Contact me"
-              link="https://www.linkedin.com/in/josepertuz/"
+              link="mailto:japertuzd@gmail.com"
               img="/mail.svg"
             />
 
