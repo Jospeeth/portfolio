@@ -80,7 +80,7 @@ const INFORMATION = {
   },
   personalInfo: {
     description:
-      "Hello coder! 👋 My name is Jose Pertuz and I am a junior front-end developer 💻. I'm currently studying System Engineering at Universidad Simón Bolívar📚.",
+      "I excel in creating immersive digital experiences, leveraging UX/UI principles to develop high-performance web applications that are both accessible and visually striking",
   },
   aboutMe: {
     description:

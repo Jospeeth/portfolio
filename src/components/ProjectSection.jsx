@@ -5,10 +5,8 @@ import { INFORMATION } from "../constans";
 import { useRef } from "react";
 
 const ProjectsSection = () => {
-
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-
 
   const cardVariants = {
     initial: { y: 50, opacity: 0 },
@@ -16,15 +14,15 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="Projects" className="pt-16">
+    <section id="Projects" className="pt-12">
       <h2 className="text-6xl font-bold text-white mt-8 text-start">
         Projects
-
-
       </h2>
       <div className="w-full flex">
-        <p className="font-extralight py-16 max-w-3xl leading-7 ">{INFORMATION.projectsInfo.description}</p>
-     </div>
+        <p className="text-base text-primary py-12 max-w-3xl leading-7 ">
+          {INFORMATION.projectsInfo.description}
+        </p>
+      </div>
       <ul ref={ref} className="flex flex-wrap gap-8 justify-center md:gap-12">
         {PROJECTS.map((project, index) => (
           <motion.li

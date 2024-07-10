@@ -6,7 +6,7 @@ import ContactSection from "./components/ContactSection";
 function App() {
 
   return (
-    <main className="flex min-h-screen flex-col bg-background min-w-full">
+    <main className="flex min-h-full flex-col bg-background min-w-full">
       <NavBar/>
       <div className="container mt-24 px-12 py-4 ">
         <HeroSection />
