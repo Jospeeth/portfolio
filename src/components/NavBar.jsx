@@ -19,20 +19,17 @@ function NavBar() {
     };
   }, []);
 
-  const handleLinkClick = () => {
-    setNavbarOpen(false);
-  };
   return (
     <nav className=" fixed top-0 left-0 right-0 z-10  bg-gradient-to-r bg-gray-800/80   bg-opacity-90 mx-auto">
       <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
-        <a href="#" className="text-2xl md:text-5xl font-semibold">
-          Jospeeth 
+        <a href="#" className="text-2xl md:text-3 xl font-semibold">
+          Jose Petuz  | jospeeth
         </a>
         <div className=" mobile-menu block md:hidden">
           {!navbarOpen ? (
             <button
-            className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white transform transition-transform duration-200 ease-in-out hover:scale-110 active:scale-90"
-            onClick={() => setNavbarOpen(true)}
+              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white transform transition-transform duration-200 ease-in-out hover:scale-110 active:scale-90"
+              onClick={() => setNavbarOpen(true)}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -51,8 +48,8 @@ function NavBar() {
             </button>
           ) : (
             <button
-            className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white transform transition-transform duration-200 ease-in-out hover:scale-110 active:scale-90"
-            onClick={() => setNavbarOpen(false)}
+              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white transform transition-transform duration-200 ease-in-out hover:scale-110 active:scale-90"
+              onClick={() => setNavbarOpen(false)}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

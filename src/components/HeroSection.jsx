@@ -6,7 +6,7 @@ import { INFORMATION } from "../constans";
 import ButtonLink from "./modules/ButtonLink";
 const HeroSection = () => {
   return (
-    <section className="lg:py-16">
+    <section >
       <div className="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-12 items-center justify-items-center">
         <div className="col-span-7 place-content-center text-center sm:text-left">
           <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-7xl font-extrabold">
