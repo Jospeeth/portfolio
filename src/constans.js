@@ -1,27 +1,54 @@
 import {tuneWave, eduKids, artiHeal} from "./assets/";
 
-const TAB_DATA = [
-  {
-    title: "Skills",
-    id: "skills",
-    content: [
-      "● JavaScript",
-      "● React",
-      "● Node.js",
-      "● Express",
-      "● SQL",
-      "● HTML",
-      "● CSS",
-      "● Git",
-    ]
-  },
-  {
-    title: "Education",
-    id: "education",
-    content: [
-      "● Universidad Simon Bolivar - Barranquilla, Colombia",
-    ]
-  },
+const SKILS_AND_TOOLS = [
+  
+      {
+        id: 1,
+        title: "JavaScript",
+        img: "/javascript.svg"
+      },
+      {
+        id: 2,
+        title: "React.js",
+        img: "/react.svg"
+      },
+      {
+        id: 3,
+        title: "Node.js",
+        img: "/nodejs.svg"
+      },
+      {
+        id: 4,
+        title: "Express.js",
+        img: "/expressjs_dark.svg"
+      },
+    
+      {
+        id: 5,
+        title: "MySQL",
+        img: "/mysql.svg"
+      },
+      {
+        id: 6,
+        title: "Tailwind CSS",
+        img: "/tailwindcss.svg"
+      },
+      {
+        id: 7,
+        title: "Figma",
+        img: "/figma.svg"
+      },
+      {
+        id: 8,
+        title: "HTML5",
+        img: "/html5.svg"
+      },
+      {
+        id: 9,
+        title: "Sass",
+        img: "/sass.svg"
+      }
+      
 ];
 
 const PROJECTS = [
@@ -88,4 +115,4 @@ const INFORMATION = {
   },
 };
 
-export { TAB_DATA, PROJECTS, ACHIVEMENTSLIST,INFORMATION };
+export { SKILS_AND_TOOLS, PROJECTS, ACHIVEMENTSLIST,INFORMATION };

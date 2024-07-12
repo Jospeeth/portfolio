@@ -1,12 +1,13 @@
 import Spline from "@splinetool/react-spline";
 import { TypeAnimation } from "react-type-animation";
-import { ACHIVEMENTSLIST } from "../constans";
+import { ACHIVEMENTSLIST, INFORMATION } from "../constans";
 import myRoom from "../assets/my-room.webp";
-import { INFORMATION } from "../constans";
 import ButtonLink from "./modules/ButtonLink";
+import "./styles.css";
+
 const HeroSection = () => {
   return (
-    <section >
+    <section>
       <div className="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-12 items-center justify-items-center">
         <div className="col-span-7 place-content-center text-center sm:text-left">
           <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-7xl font-extrabold">
@@ -16,18 +17,13 @@ const HeroSection = () => {
             <br />
 
             <TypeAnimation
-              sequence={[
-                "Jose Pertuz",
-                1000,
-                "Web Developer",
-                1000,
-              ]}
+              sequence={["Jose Pertuz", 1000, "Web Developer", 1000]}
               wrapper="span"
               speed={15}
               repeat={Infinity}
             />
           </h1>
-          <p className="text-primary text-base sm:text-lg lg:text-xl mb-6">
+          <p className="text-primary text-base sm:text-lg lg:text-2xl mb-6 text-start">
             {INFORMATION.personalInfo.description}
           </p>
           <div className=" flex gap-x-4">
@@ -58,8 +54,8 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      <div className="py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <div className="sm:border-[#33353F] sm:border rounded-md py-8 px-16 flex flex-col sm:flex-row items-center justify-between">
+      <div className="py-2 px-4 xl:gap-16 sm:py-12 xl:px-16 flex justify-center">
+        <div className="sm:border-[#536ef3] sm:border rounded-md py-2 px-16 flex flex-col sm:flex-row items-center justify-between w-3/5">
           {ACHIVEMENTSLIST.map((achievement, index) => {
             return (
               <div
@@ -76,6 +72,15 @@ const HeroSection = () => {
               </div>
             );
           })}
+        </div>
+      </div>
+
+      <div className=" hidden  md:flex md:justify-center">
+        <div className="scrolldown">
+          <div className="chevrons">
+            <div className="chevrondown"></div>
+            <div className="chevrondown"></div>
+          </div>
         </div>
       </div>
     </section>

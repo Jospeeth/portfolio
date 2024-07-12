@@ -1,12 +1,15 @@
+
 import GithubIcon from "../../public/github-icon.svg";
 import LinkedinIcon from "../../public/linkedin-icon.svg";
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { motion, useInView } from "framer-motion";
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
+  const ref = useRef();
   const form = useRef();
+  const isInView = useInView(ref, { once: true });
 
-  console.log(import.meta.env);
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -27,14 +30,15 @@ const EmailSection = () => {
           setEmailSubmitted(true);
         },
         (error) => {
-          console.log(error.text);
+          throw new Error("Error sending email: ", error);
         }
       );
   };
   return (
     <section
       id="Contact"
-      className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
+      className="grid md:grid-cols-2 my-12 py-12 md:my-12 md:py-24 gap-4 relative"
+      ref={ref}
     >
       <div>
         <h5 className="text-xl font-bold text-white my-2">
@@ -62,16 +66,20 @@ const EmailSection = () => {
           </a>
         </div>
       </div>
-      <div>
-
+      <div className="mx-10">
         {emailSubmitted ? (
           <p className="text-green-500 text-sm mt-2">
             Email sent successfully!
           </p>
         ) : (
-            
-            <form className="flex flex-col" ref={form} onSubmit={sendEmail}>
-            <h5 className="text-4xl font-bold text-white mb-8">Send me a mail.</h5>
+          <form
+            className="flex flex-col bg-zinc-900 p-6 rounded-lg gap-6"
+            ref={form}
+            onSubmit={sendEmail}
+          >
+            <h5 className="text-4xl font-bold text-white mb-8">
+              Send me a mail.
+            </h5>
             <div className="mb-6">
               <label
                 htmlFor="email"

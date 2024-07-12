@@ -65,7 +65,7 @@ const ProjectCard = ({
       </div>
 
       <div className="text-white rounded-b-xl bg-[#181818]py-6 px-4">
-        <h5 className="text-xl font-semibold mb-4">{title}</h5>
+        <h5 className="text-xl font-semibold mb-4 mt-4 md:mb-6 md:mt-0">{title}</h5>
         <p className="text-[#ADB7BE] text-[14px]  my-2">{description}</p>
         <div className="flex gap-x-2">
           <a className="inline-flex items-center justify-center gap-2 px-2 py-2 space-x-2 

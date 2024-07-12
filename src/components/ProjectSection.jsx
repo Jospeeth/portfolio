@@ -1,7 +1,7 @@
 import ProjectCard from "./modules/ProjectCard";
 import { motion, useInView } from "framer-motion";
-import { PROJECTS } from "../constans";
-import { INFORMATION } from "../constans";
+import { PROJECTS, INFORMATION } from "../constans";
+
 import { useRef } from "react";
 
 const ProjectsSection = () => {
@@ -19,7 +19,7 @@ const ProjectsSection = () => {
         Projects
       </h2>
       <div className="w-full flex">
-        <p className="text-base text-primary py-12 max-w-3xl leading-7 ">
+        <p className="text-base text-primary lg:text-lg py-12 max-w-3xl leading-7 ">
           {INFORMATION.projectsInfo.description}
         </p>
       </div>
