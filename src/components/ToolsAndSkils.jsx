@@ -34,6 +34,7 @@ function ToolsAndSkils() {
                 src={item.img}
                 alt={item.title}
                 className="h-16 w-16 transition duration-300 ease-in-out hover:scale-110"
+                loading="lazy"
               />
               <span className="text-white text-sm mt-2">{item.title}</span>
             </div>
