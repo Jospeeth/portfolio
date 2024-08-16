@@ -1,6 +1,6 @@
 
-import GithubIcon from "../../public/github-icon.svg";
-import LinkedinIcon from "../../public/linkedin-icon.svg";
+import GithubIcon from "../../public/images/github-icon.svg";
+import LinkedinIcon from "../../public/images/linkedin-icon.svg";
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { motion, useInView } from "framer-motion";

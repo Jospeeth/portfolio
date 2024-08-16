@@ -5,48 +5,48 @@ const SKILS_AND_TOOLS = [
       {
         id: 1,
         title: "JavaScript",
-        img: "/javascript.svg"
+        img: "/public/images/javascript.svg"
       },
       {
         id: 2,
         title: "React.js",
-        img: "/react.svg"
+        img: "/public/images/react.svg"
       },
       {
         id: 3,
         title: "Node.js",
-        img: "/nodejs.svg"
+        img: "/public/images/nodejs.svg"
       },
       {
         id: 4,
         title: "Express.js",
-        img: "/expressjs_dark.svg"
+        img: "/public/images/expressjs_dark.svg"
       },
     
       {
         id: 5,
         title: "MySQL",
-        img: "/mysql.svg"
+        img: "/public/images/mysql.svg"
       },
       {
         id: 6,
         title: "Tailwind CSS",
-        img: "/tailwindcss.svg"
+        img: "/public/images/tailwindcss.svg"
       },
       {
         id: 7,
         title: "Figma",
-        img: "/figma.svg"
+        img: "/public/images/figma.svg"
       },
       {
         id: 8,
         title: "HTML5",
-        img: "/html5.svg"
+        img: "/public/images/html5.svg"
       },
       {
         id: 9,
         title: "Sass",
-        img: "/sass.svg"
+        img: "/public/images/sass.svg"
       }
       
 ];
