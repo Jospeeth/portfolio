@@ -5,40 +5,92 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https://fonts.googleapis.com https://fonts.gstatic.com https://cdn.jsdelivr.net https://prod.spline.design https://api.emailjs.com; img-src 'self' data: https://avatars.githubusercontent.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com;" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
 
-  <title>Jospeeth - Front-End Developer Portfolio</title>
-  <meta name="description"
-    content="Explore the portfolio of Jospeeth, a passionate junior front-end developer showcasing projects in HTML, CSS, JavaScript, and React.">
+  <title>Jose Pertuz | Software Engineer & Full Stack Developer in Colombia</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Portfolio of Jose Pertuz, a Software Engineer and Full Stack Developer based in Barranquilla, Colombia. Specializing in React, Node.js and other modern technologies for scalable web applications." />
+  <meta name="keywords" content="Software Engineer Colombia, Full Stack Developer, React Developer, IT Engineer Barranquilla, Node.js, and others modern technologies, Portfolio, Web Development" />
+  <meta name="author" content="Jose Pertuz" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
-  <meta property="og:title" content="Jospeeth - Junior Front-End Developer Portfolio" />
-  <meta property="og:description"
-    content="Explore the portfolio of Jospeeth, a passionate junior front-end developer showcasing projects in HTML, CSS, JavaScript, and React." />
-  <meta property="og:image" content="https://avatars.githubusercontent.com/u/88698508?v=4" />
-  <meta property="og:url" content="https://jospeeth.vercel.app/" />
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jospeeth.vercel.app/" />
+  <meta property="og:title" content="Jose Pertuz | Software Engineer & Full Stack Developer" />
+  <meta property="og:description" content="Portfolio of Jose Pertuz, a Software Engineer and Full Stack Developer based in Barranquilla, Colombia. Specializing in React, Node.js and other modern technologies." />
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/88698508?v=4" />
+  <meta property="og:site_name" content="Jose Pertuz Portfolio" />
+  <meta property="og:locale" content="en_US" />
 
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://jospeeth.vercel.app/" />
+  <meta name="twitter:title" content="Jose Pertuz | Software Engineer & Full Stack Developer" />
+  <meta name="twitter:description" content="Portfolio of Jose Pertuz, a Software Engineer and Full Stack Developer based in Barranquilla, Colombia." />
+  <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/88698508?v=4" />
+
+  <!-- Canonical URL -->
   <link rel="canonical" href="https://jospeeth.vercel.app/" />
+  <meta name="theme-color" content="#0a0a0f" />
 
+  <!-- Preconnect & DNS Prefetch for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+  <link rel="dns-prefetch" href="https://prod.spline.design" />
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"></noscript>
 
+  <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
   {
-    "@context": "http://schema.org",
-    "@type": "Person",
-    "name": " ",
-    "jobTitle": "Junior Front-End Developer",
-    "url": "https://www.yourdomain.com",
-    "sameAs": [
-      "https://www.linkedin.com/in/yourprofile",
-      "https://github.com/yourprofile"
-    ],
-    "description": "Explore the portfolio of Jospeeth, a passionate junior front-end developer showcasing projects in HTML, CSS, JavaScript, and React."
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://jospeeth.vercel.app/#person",
+        "name": "Jose Pertuz",
+        "givenName": "Jose",
+        "familyName": "Pertuz",
+        "jobTitle": ["Software Engineer", "Full Stack Developer", "IT Engineer"],
+        "url": "https://jospeeth.vercel.app/",
+        "image": "https://avatars.githubusercontent.com/u/88698508?v=4",
+        "sameAs": [
+          "https://www.linkedin.com/in/josepertuz/",
+          "https://github.com/Jospeeth"
+        ],
+        "alumniOf": "Universidad Simon Bolivar",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Barranquilla",
+          "addressCountry": "Colombia"
+        },
+        "description": "Software Engineer in Colombia specializing in full-stack development and IT infrastructure.",
+        "knowsAbout": ["React", "Node.js", "Docker", "Full Stack Development", "IT Infrastructure"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://jospeeth.vercel.app/#website",
+        "url": "https://jospeeth.vercel.app/",
+        "name": "Jose Pertuz - Portfolio",
+        "publisher": {
+          "@id": "https://jospeeth.vercel.app/#person"
+        },
+        "inLanguage": "en-US"
+      }
+    ]
   }
   </script>
 </head>
 
 <body>
-  <div id="root">Loading...</div>
-  <script type="module" src="/src/main.jsx" defer></script>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
 </body>
 
 </html>

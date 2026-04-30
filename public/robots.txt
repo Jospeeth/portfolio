@@ -1,4 +1,4 @@
-# Permitir a todos los bots rastrear el sitio completo
 User-agent: *
-Disallow:
+Allow: /
 
+Sitemap: https://jospeeth.vercel.app/sitemap.xml
