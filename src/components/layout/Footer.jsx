@@ -58,7 +58,7 @@ const Footer = () => {
 
         {/* Status */}
         <p className="text-foreground-subtle text-xs font-mono">
-          Built with React & Tailwind
+          Built with ❤️ by JP
         </p>
       </SectionWrapper>
     </footer>
