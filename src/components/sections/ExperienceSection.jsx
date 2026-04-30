@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { EXPERIENCES } from "../../data";
+import SectionWrapper from "../layout/SectionWrapper";
 
 /**
  * ExperienceSection — Professional timeline with animated reveal.
@@ -11,7 +12,7 @@ const ExperienceSection = () => {
 
   return (
     <section id="experience" className="section-padding" ref={ref}>
-      <div className="container mx-auto">
+      <SectionWrapper>
         {/* Section label */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -140,7 +141,7 @@ const ExperienceSection = () => {
             ))}
           </div>
         </div>
-      </div>
+      </SectionWrapper>
     </section>
   );
 };

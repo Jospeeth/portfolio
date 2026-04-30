@@ -75,13 +75,13 @@ export const SKILLS = [
     category: "devops",
   },
   {
-    id: 9,
+    id: 8,
     title: "HTML5",
     icon: "/images/html5.svg",
     category: "language",
   },
   {
-    id: 10,
+    id: 9,
     title: "Sass",
     icon: "/images/sass.svg",
     category: "frontend",

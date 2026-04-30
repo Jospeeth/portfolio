@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { PERSONAL_INFO } from "../../data";
+import SectionWrapper from "../layout/SectionWrapper";
 
 /**
  * ContactSection — Two-column layout with social links and an email form.
@@ -70,7 +71,7 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="section-padding" ref={sectionRef}>
-      <div className="container mx-auto">
+      <SectionWrapper>
         {/* Section label */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -269,7 +270,7 @@ const ContactSection = () => {
             </form>
           </motion.div>
         </div>
-      </div>
+      </SectionWrapper>
     </section>
   );
 };

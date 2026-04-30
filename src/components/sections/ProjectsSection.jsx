@@ -1,6 +1,7 @@
 import { useRef, useState, useCallback } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { PROJECTS } from "../../data";
+import SectionWrapper from "../layout/SectionWrapper";
 import ProjectCard from "../ui/ProjectCard";
 import ProjectModal from "../ui/ProjectModal";
 
@@ -36,7 +37,7 @@ const ProjectsSection = () => {
 
   return (
     <section id="projects" className="section-padding" ref={ref}>
-      <div className="container mx-auto">
+      <SectionWrapper>
         {/* Section label */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -68,7 +69,7 @@ const ProjectsSection = () => {
           from healthcare platforms to educational tools and professional services.
         </motion.p>
 
-        {/* Filter tabs */}
+        Filter tabs
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -123,7 +124,7 @@ const ProjectsSection = () => {
             <p className="text-foreground-subtle">No projects in this category yet.</p>
           </div>
         )}
-      </div>
+      </SectionWrapper>
 
       {/* Project detail modal */}
       <ProjectModal

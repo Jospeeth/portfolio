@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
 import { motion } from "framer-motion";
+import SectionWrapper from "../layout/SectionWrapper";
 import { TypeAnimation } from "react-type-animation";
 import { PERSONAL_INFO, STATS } from "../../data";
 import { myRoom } from "../../assets/";
@@ -37,7 +38,7 @@ const HeroSection = () => {
       <div className="absolute top-1/4 -left-32 w-64 h-64 bg-primary/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-1/4 -right-32 w-64 h-64 bg-accent/8 rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="container mx-auto">
+      <SectionWrapper>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Text content */}
           <motion.div
@@ -138,8 +139,7 @@ const HeroSection = () => {
                 alt="Jose Pertuz workspace"
                 className="relative w-full h-[300px] sm:h-[350px] object-cover rounded-3xl border border-border/50"
                 loading="eager"
-                width="400"
-                height="350"
+
               />
             </div>
             {/* Desktop: 3D Spline scene */}
@@ -184,7 +184,7 @@ const HeroSection = () => {
         >
           <a href="#about" className="scroll-indicator" aria-label="Scroll down" />
         </motion.div>
-      </div>
+      </SectionWrapper>
     </section>
   );
 };

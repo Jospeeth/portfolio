@@ -12,6 +12,7 @@
     --surface: 240 6% 8%;
     --surface-hover: 240 6% 12%;
     --surface-elevated: 240 6% 10%;
+    
 
     /* Foreground */
     --foreground: 0 0% 95%;
@@ -113,7 +114,7 @@ p {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--border));
+  background: hsl(var(--primary));
   border-radius: 3px;
 }
 

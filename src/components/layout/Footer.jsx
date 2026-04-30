@@ -1,4 +1,5 @@
 import { PERSONAL_INFO } from "../../data";
+import SectionWrapper from "./SectionWrapper";
 
 /**
  * Footer — Minimal, professional footer with social links.
@@ -8,7 +9,7 @@ const Footer = () => {
 
   return (
     <footer className="border-t border-border/50 bg-surface/30" role="contentinfo">
-      <div className="container mx-auto py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <SectionWrapper className="py-8 flex flex-col md:flex-row items-center justify-between gap-4">
         {/* Branding */}
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center">
@@ -59,7 +60,7 @@ const Footer = () => {
         <p className="text-foreground-subtle text-xs font-mono">
           Built with React & Tailwind
         </p>
-      </div>
+      </SectionWrapper>
     </footer>
   );
 };

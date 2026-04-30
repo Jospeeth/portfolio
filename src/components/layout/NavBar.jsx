@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { NAV_LINKS } from "../../data";
+import SectionWrapper from "./SectionWrapper";
 
 /**
  * NavBar — Fixed top navigation with glass effect, scroll-aware styling,
@@ -17,8 +18,10 @@ const NavBar = () => {
 
     // Determine active section based on scroll position
     const sections = NAV_LINKS.map((link) => link.href.replace("#", ""));
+    console.log(sections);
     for (let i = sections.length - 1; i >= 0; i--) {
       const el = document.getElementById(sections[i]);
+      
       if (el) {
         const rect = el.getBoundingClientRect();
         if (rect.top <= 120) {
@@ -53,13 +56,13 @@ const NavBar = () => {
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-background/80 backdrop-blur-xl border-b border-border/50 shadow-lg shadow-black/5"
+          ? "bg-background/50 backdrop-blur-xl border-b border-border/50 shadow-lg shadow-black/5"
           : "bg-transparent"
       }`}
       role="navigation"
       aria-label="Main navigation"
     >
-      <div className="container mx-auto flex items-center justify-between py-4">
+      <SectionWrapper className="flex items-center justify-between py-4">
         {/* Logo */}
         <a
           href="#home"
@@ -138,7 +141,7 @@ const NavBar = () => {
             />
           </div>
         </button>
-      </div>
+      </SectionWrapper>
 
       {/* Mobile Menu */}
       <AnimatePresence>
@@ -151,7 +154,7 @@ const NavBar = () => {
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="md:hidden overflow-hidden border-t border-border/50 bg-background/95 backdrop-blur-xl"
           >
-            <ul className="container mx-auto flex flex-col gap-1 py-4" role="menu">
+            <SectionWrapper className="flex flex-col gap-1 py-4" role="menu">
               {NAV_LINKS.map((link, index) => (
                 <motion.li
                   key={link.href}
@@ -188,7 +191,7 @@ const NavBar = () => {
                   Get in touch
                 </a>
               </motion.li>
-            </ul>
+            </SectionWrapper>
           </motion.div>
         )}
       </AnimatePresence>

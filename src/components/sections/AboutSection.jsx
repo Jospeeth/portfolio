@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { PERSONAL_INFO, SKILLS } from "../../data";
+import SectionWrapper from "../layout/SectionWrapper";
 import SkillsGrid from "../ui/SkillsGrid";
 
 /**
@@ -12,7 +13,7 @@ const AboutSection = () => {
 
   return (
     <section id="about" className="section-padding" ref={ref}>
-      <div className="container mx-auto">
+      <SectionWrapper>
         {/* Section label */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -101,7 +102,7 @@ const AboutSection = () => {
         >
           <SkillsGrid skills={SKILLS} />
         </motion.div>
-      </div>
+      </SectionWrapper>
     </section>
   );
 };
