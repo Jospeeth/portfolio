@@ -120,6 +120,22 @@ export const EXPERIENCES = [
   },
   {
     id: 2,
+    company: "Odontología Especializada",
+    role: "Full Stack Developer (Freelance)",
+    type: "Contract",
+    dates: "Jun 2025 – Jul 2025",
+    location: "Barranquilla, Atlántico, Colombia",
+    mode: "Remote",
+    highlights: [
+      "Developed a modern web application for a dental clinic, improving patient management and appointment scheduling",
+      "Enhanced user experience through intuitive design and responsive interfaces",
+      "Implemented secure authentication and authorization systems using JWT and PostgreSQL",
+    ],
+    technologies: ["React", "Node.js", "Express.js", "PostgreSQL", "JWT", "Postman"],
+    current: false,
+  },
+  {
+    id: 3,
     company: "Farmacápsulas",
     role: "Systems Engineering Intern",
     type: "Full-time Internship",
