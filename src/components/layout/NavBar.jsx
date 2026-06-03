@@ -18,7 +18,6 @@ const NavBar = () => {
 
     // Determine active section based on scroll position
     const sections = NAV_LINKS.map((link) => link.href.replace("#", ""));
-    console.log(sections);
     for (let i = sections.length - 1; i >= 0; i--) {
       const el = document.getElementById(sections[i]);
       
