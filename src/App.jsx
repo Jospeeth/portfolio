@@ -1,10 +1,12 @@
+import { lazy, Suspense } from "react";
 import NavBar from "./components/layout/NavBar";
 import Footer from "./components/layout/Footer";
-import HeroSection from "./components/sections/HeroSection";
-import AboutSection from "./components/sections/AboutSection";
-import ExperienceSection from "./components/sections/ExperienceSection";
-import ProjectsSection from "./components/sections/ProjectsSection";
-import ContactSection from "./components/sections/ContactSection";
+
+const HeroSection = lazy(() => import("./components/sections/HeroSection"));
+const AboutSection = lazy(() => import("./components/sections/AboutSection"));
+const ExperienceSection = lazy(() => import("./components/sections/ExperienceSection"));
+const ProjectsSection = lazy(() => import("./components/sections/ProjectsSection"));
+const ContactSection = lazy(() => import("./components/sections/ContactSection"));
 
 /**
  * App — Root layout component assembling all portfolio sections.
@@ -19,11 +21,13 @@ function App() {
       <NavBar />
 
       <main className="relative z-[1]">
-        <HeroSection />
-        <AboutSection />
-        <ExperienceSection />
-        <ProjectsSection />
-        <ContactSection />
+        <Suspense fallback={<div className="loading-screen">Cargando portafolio...</div>}>
+          <HeroSection />
+          <AboutSection />
+          <ExperienceSection />
+          <ProjectsSection />
+          <ContactSection />
+        </Suspense>
       </main>
 
       <Footer />
