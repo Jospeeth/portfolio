@@ -13,13 +13,14 @@ const sectionsConfig =[
 function useIntersectionObserver(options={}){
     const [isIntersecting, setIsIntersecting] = useState(false);
     const ref = useRef(null)
+    console.log(ref);
+
     useEffect(()=>{
         const currentRef = ref.current;
         if(!currentRef)return;
         
         const observer = new IntersectionObserver(([entry])=>{
             setIsIntersecting(entry.isIntersecting);
-            console.log(entry.target)
         },options)
 
         observer.observe(currentRef);
