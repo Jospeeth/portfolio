@@ -1,7 +1,8 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { NAV_LINKS } from "../../data";
+import { NAV_LINKS } from "../../utils/data";
 import SectionWrapper from "./SectionWrapper";
+import ToggleTheme from "../ui/ToggleTheme";
 
 /**
  * NavBar — Fixed top navigation with glass effect, scroll-aware styling,
@@ -101,7 +102,7 @@ const NavBar = () => {
             </li>
           ))}
         </ul>
-
+        
         {/* Resume CTA (desktop) */}
         <a
           href="mailto:japertuzd@gmail.com"
@@ -140,7 +141,9 @@ const NavBar = () => {
             />
           </div>
         </button>
+        <ToggleTheme />
       </SectionWrapper>
+      
 
       {/* Mobile Menu */}
       <AnimatePresence>

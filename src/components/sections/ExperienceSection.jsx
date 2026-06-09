@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { EXPERIENCES } from "../../data";
+import { EXPERIENCES } from "../../utils/data";
 import SectionWrapper from "../layout/SectionWrapper";
 
 /**
@@ -60,11 +60,10 @@ const ExperienceSection = () => {
               >
                 {/* Timeline dot */}
                 <div className="absolute left-0 md:left-8 top-6 -translate-x-1/2 z-10">
-                  <div className={`w-4 h-4 rounded-full border-2 ${
-                    exp.current
+                  <div className={`w-4 h-4 rounded-full border-2 ${exp.current
                       ? "bg-primary border-primary shadow-lg shadow-primary/30"
                       : "bg-surface border-border"
-                  }`} />
+                    }`} />
                 </div>
 
                 {/* Card */}

@@ -2,7 +2,7 @@ import { lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 import SectionWrapper from "../layout/SectionWrapper";
 import { TypeAnimation } from "react-type-animation";
-import { PERSONAL_INFO, STATS } from "../../data";
+import { PERSONAL_INFO, STATS } from "../../utils/data";
 import { myRoom } from "../../assets/";
 
 const Spline = lazy(() => import("@splinetool/react-spline"));

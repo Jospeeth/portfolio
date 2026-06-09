@@ -1,6 +1,6 @@
 import { useRef, useState, useCallback } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { PROJECTS } from "../../data";
+import { PROJECTS } from "../../utils/data";
 import SectionWrapper from "../layout/SectionWrapper";
 import ProjectCard from "../ui/ProjectCard";
 import ProjectModal from "../ui/ProjectModal";
@@ -84,11 +84,10 @@ const ProjectsSection = () => {
               role="tab"
               aria-selected={activeFilter === cat.id}
               onClick={() => setActiveFilter(cat.id)}
-              className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 ${
-                activeFilter === cat.id
+              className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 ${activeFilter === cat.id
                   ? "bg-primary text-primary-foreground shadow-lg shadow-primary/25"
                   : "bg-surface text-foreground-muted border border-border hover:border-border-hover hover:text-foreground"
-              }`}
+                }`}
             >
               {cat.label}
             </button>

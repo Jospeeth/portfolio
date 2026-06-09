@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { PERSONAL_INFO, SKILLS } from "../../data";
+import { PERSONAL_INFO, SKILLS } from "../../utils/data";
 import SectionWrapper from "../layout/SectionWrapper";
 import SkillsGrid from "../ui/SkillsGrid";
 

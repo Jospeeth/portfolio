@@ -52,6 +52,42 @@
     --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
+@layer base {
+  .light {
+    /* Background & Surface */
+    --background: 220 25% 97%;
+    --surface: 0 0% 100%;
+    --surface-hover: 220 20% 95%;
+    --surface-elevated: 0 0% 100%;
+
+    /* Foreground */
+    --foreground: 240 10% 8%;
+    --foreground-muted: 240 5% 35%;
+    --foreground-subtle: 240 4% 50%;
+
+    /* Primary — Electric Violet */
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 262 83% 58% / 0.08;
+
+    /* Accent — Cyan */
+    --accent: 190 95% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Secondary */
+    --secondary: 220 18% 94%;
+    --secondary-foreground: 240 10% 15%;
+
+    /* Border & Ring */
+    --border: 220 15% 88%;
+    --border-hover: 220 15% 78%;
+    --ring: 262 83% 58%;
+
+    /* Success / Danger */
+    --success: 142 72% 42%;
+    --danger: 0 84% 55%;
+  }
+}
 
 /* ============================================
    GLOBAL RESET & BASE STYLES

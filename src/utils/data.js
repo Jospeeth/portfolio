@@ -1,4 +1,4 @@
-import { eduKids, artiHeal, specializedDentistry } from "./assets/";
+import { eduKids, artiHeal, specializedDentistry } from "../assets";
 
 // ============================================
 // NAVIGATION

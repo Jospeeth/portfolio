@@ -1,4 +1,4 @@
-import {tuneWave, eduKids, artiHeal} from "./assets/";
+import {tuneWave, eduKids, artiHeal} from "../assets";
 
 const SKILS_AND_TOOLS = [
   
