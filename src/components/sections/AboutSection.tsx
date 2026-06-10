@@ -1,8 +1,8 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { PERSONAL_INFO, SKILLS } from "../../utils/data";
-import SectionWrapper from "../layout/SectionWrapper";
-import SkillsGrid from "../ui/SkillsGrid";
+import { PERSONAL_INFO, SKILLS } from "../../utils/data.js";
+import SectionWrapper from "../layout/SectionWrapper.js";
+import SkillsGrid from "../ui/SkillsGrid.jsx";
 
 /**
  * AboutSection — Personal bio and skills grid with staggered reveal.

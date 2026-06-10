@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { EXPERIENCES } from "../../utils/data";
-import SectionWrapper from "../layout/SectionWrapper";
+import { EXPERIENCES } from "../../utils/data.js";
+import SectionWrapper from "../layout/SectionWrapper.js";
 
 /**
  * ExperienceSection — Professional timeline with animated reveal.

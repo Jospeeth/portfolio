@@ -1,5 +1,5 @@
-import Home from "./home";  
-import Footer from "./components/layout/Footer";
+import Home from "./home.js";  
+import Footer from "./components/layout/Footer.jsx";
 
 /**
  * App — Root layout component assembling all portfolio sections.

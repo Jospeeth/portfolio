@@ -1,8 +1,8 @@
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import { PERSONAL_INFO } from "../../utils/data";
-import SectionWrapper from "../layout/SectionWrapper";
+import { PERSONAL_INFO } from "../../utils/data.js";
+import SectionWrapper from "../layout/SectionWrapper.js";
 
 /**
  * ContactSection — Two-column layout with social links and an email form.

@@ -2,12 +2,12 @@ import { lazy, Suspense } from "react";
 import { useEffect, useState, useRef } from 'react';
 
 const sectionsConfig =[
-      {id: 'navbar', Component: lazy(() => import("./components/layout/NavBar"))},
-    {id: 'hero', Component: lazy(() => import("./components/sections/HeroSection"))},
-    {id: 'about', Component: lazy(() => import("./components/sections/AboutSection"))},
-    {id: 'experience', Component: lazy(() => import("./components/sections/ExperienceSection"))},
-    {id: 'projects', Component: lazy(() => import("./components/sections/ProjectsSection"))},
-    {id: 'contact', Component: lazy(() => import("./components/sections/ContactSection"))},
+    {id: 'navbar', Component: lazy(() => import("./components/layout/NavBar.tsx"))},
+    {id: 'hero', Component: lazy(() => import("./components/sections/HeroSection.tsx"))},
+    {id: 'about', Component: lazy(() => import("./components/sections/AboutSection.tsx"))},
+    {id: 'experience', Component: lazy(() => import("./components/sections/ExperienceSection.tsx"))},
+    {id: 'projects', Component: lazy(() => import("./components/sections/ProjectsSection.tsx"))},
+    {id: 'contact', Component: lazy(() => import("./components/sections/ContactSection.tsx"))},
 ]
 
 
@@ -56,7 +56,6 @@ function useIntersectionObserver(options: UseIntersectionObserverOptions = {}) {
 }
 
 export function SectionWrapper({ Component, sections }: SectionWrapperProps) {
-  console.log(sectionsConfig)
   // Setup Intersection Observer to trigger loading 20px before the section is scrolled into view
   const [ref, isVisible] = useIntersectionObserver({ threshold: 0.01, rootMargin: "20px" });
   const [hasBeenVisible, setHasBeenVisible] = useState(false);

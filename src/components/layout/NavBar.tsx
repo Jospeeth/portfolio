@@ -1,14 +1,17 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { NAV_LINKS } from "../../utils/data";
-import SectionWrapper from "./SectionWrapper";
-import ToggleTheme from "../ui/ToggleTheme";
+import { NAV_LINKS } from "../../utils/data.js";
+import SectionWrapper from "./SectionWrapper.js";
+import ToggleTheme from "../ui/ToggleTheme.jsx";
+import { Type } from "lucide-react";
 
 
 /**
  * NavBar — Fixed top navigation with glass effect, scroll-aware styling,
  * and animated mobile menu.
  */
+
+
 export default function NavBar() {
 
   const [isOpen, setIsOpen] = useState(false);
@@ -16,18 +19,19 @@ export default function NavBar() {
   const [activeSection, setActiveSection] = useState("#home");
 
   // Track scroll position for glass effect intensity
-  const handleScroll = useCallback(() => {
+  const handleScroll = useCallback(() => { 
     setScrolled(window.scrollY > 20);
 
     // Determine active section based on scroll position
-    const sections = NAV_LINKS.map((link) => link.href.replace("#", ""));
-    for (let i = sections.length - 1; i >= 0; i--) {
-      const el = document.getElementById(sections[i]);
+    const sections: string[] = NAV_LINKS.map((link) => link.href.replace("#", ""));
+    for (const section of sections) {
+      const el = document.getElementById(section);
+      
       
       if (el) {
         const rect = el.getBoundingClientRect();
         if (rect.top <= 120) {
-          setActiveSection(`#${sections[i]}`);
+          setActiveSection(`#${section}`);
           break;
         }
       }
@@ -49,9 +53,8 @@ export default function NavBar() {
   }, []);
 
   // Close mobile menu on link click
-  const handleLinkClick = (id) => {
-    setShowComponent(true);
-  }
+   const handleLinkClick = () => setIsOpen(false);
+
 
   return (
     <motion.nav

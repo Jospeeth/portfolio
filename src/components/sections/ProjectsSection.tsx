@@ -1,9 +1,9 @@
 import { useRef, useState, useCallback } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { PROJECTS } from "../../utils/data";
-import SectionWrapper from "../layout/SectionWrapper";
-import ProjectCard from "../ui/ProjectCard";
-import ProjectModal from "../ui/ProjectModal";
+import { PROJECTS } from "../../utils/data.js";
+import SectionWrapper from "../layout/SectionWrapper.js";
+import ProjectCard from "../ui/ProjectCard.jsx";
+import ProjectModal from "../ui/ProjectModal.jsx";
 
 /**
  * ProjectsSection — Filterable project grid with detail modals.
@@ -13,19 +13,30 @@ const CATEGORIES = [
   { id: "fullstack", label: "Full-Stack" },
   { id: "frontend", label: "Frontend" },
 ];
-
+interface ProjectType {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  technologies: string[];
+  features: string[];
+  github: string;
+  previewUrl: string | null;
+  category: string;
+  featured: boolean;
+}
 const ProjectsSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [activeFilter, setActiveFilter] = useState("all");
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState<ProjectType | null>(null);
 
   const filteredProjects =
     activeFilter === "all"
       ? PROJECTS
       : PROJECTS.filter((p) => p.category === activeFilter);
 
-  const handleOpenModal = useCallback((project) => {
+  const handleOpenModal = useCallback((project: ProjectType) => {
     setSelectedProject(project);
     document.body.style.overflow = "hidden";
   }, []);

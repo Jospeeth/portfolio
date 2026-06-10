@@ -1,13 +1,23 @@
 import React from "react";
 
-const ProjectCard = ({
+
+interface ProjectCardProps {
+  image: string;
+  title: string;
+  description: string;
+  git: string;
+  previewUrl: string;
+  tegnologies: string[];
+}
+
+export default function ProjectCard({
   image,
   title,
   description,
   git,
   previewUrl,
   tegnologies,
-}) => {
+}:ProjectCardProps) {
   return (
     <div className="bg-zinc-900 p-5 rounded-2xl sm:w-[360px] w-full ">
       <div className="h-48 md:h-56 rounded-t-xl relative group">
@@ -124,4 +134,4 @@ const ProjectCard = ({
   );
 };
 
-export default ProjectCard;
+

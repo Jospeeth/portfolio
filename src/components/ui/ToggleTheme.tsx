@@ -1,8 +1,11 @@
-import useTheme from "./useTheme";
+import useTheme from "./useTheme.jsx";
 import {Moon, Sun} from 'lucide-react';
 
+interface ToggleThemeProps{
+    className?:string;
+}
 
-export default function ToggleTheme({ className }) {
+export default function ToggleTheme({ className }: ToggleThemeProps) {
     const { islightMode, setIslightMode } = useTheme();
 
     return(

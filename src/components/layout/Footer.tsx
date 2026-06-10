@@ -1,5 +1,5 @@
-import { PERSONAL_INFO } from "../../utils/data";
-import SectionWrapper from "./SectionWrapper";
+import { PERSONAL_INFO } from "../../utils/data.js";
+import SectionWrapper from "./SectionWrapper.jsx";
 
 /**
  * Footer — Minimal, professional footer with social links.

@@ -1,4 +1,4 @@
-import { eduKids, artiHeal, specializedDentistry } from "../assets";
+import { eduKids, artiHeal, specializedDentistry } from "../assets/index.js";
 
 // ============================================
 // NAVIGATION
@@ -18,7 +18,7 @@ export const PERSONAL_INFO = {
   name: "Jose Pertuz",
   alias: "jospeeth",
   role: "Software Engineer & IT Engineer",
-  taglines: ["Software Engineer", "Full Stack Developer", "React Developer", "IT Engineer"],
+  taglines: ["Software Engineer", "FullStack Developer", "React Developer", "IT Engineer"],
   email: "japertuzd@gmail.com",
   github: "https://github.com/Jospeeth",
   linkedin: "https://www.linkedin.com/in/josepertuz/",

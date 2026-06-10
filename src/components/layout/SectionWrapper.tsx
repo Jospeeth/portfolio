@@ -6,7 +6,13 @@ import { forwardRef } from "react";
  * It provides a wide max-width (max-w-7xl) and balanced responsive padding
  * to give the content more breathing room on large screens, while remaining tight on mobile.
  */
-const SectionWrapper = forwardRef(({ children, className = "", id }, ref) => {
+
+interface SectionWrapperProps{
+  children: React.ReactNode;
+  className?: string;
+  id?: string;
+}
+const SectionWrapper = forwardRef<HTMLDivElement, SectionWrapperProps>(({ children, className = "", id }, ref) => {
   return (
     <div
       id={id}
