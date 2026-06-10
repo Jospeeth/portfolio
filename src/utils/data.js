@@ -4,11 +4,11 @@ import { eduKids, artiHeal, specializedDentistry } from "../assets";
 // NAVIGATION
 // ============================================
 export const NAV_LINKS = [
-  { href: "#home", title: "Home" },
-  { href: "#about", title: "About" },
-  { href: "#experience", title: "Experience" },
-  { href: "#projects", title: "Projects" },
-  { href: "#contact", title: "Contact" },
+  { id: 'home', href: "#home", title: "Home" },
+  { id: 'about', href: "#about", title: "About" },
+  { id: 'experience', href: "#experience", title: "Experience" },
+  { id: 'projects', href: "#projects", title: "Projects" },
+  { id: 'contact', href: "#contact", title: "Contact" },
 ];
 
 // ============================================

@@ -4,11 +4,13 @@ import { NAV_LINKS } from "../../utils/data";
 import SectionWrapper from "./SectionWrapper";
 import ToggleTheme from "../ui/ToggleTheme";
 
+
 /**
  * NavBar — Fixed top navigation with glass effect, scroll-aware styling,
  * and animated mobile menu.
  */
-const NavBar = () => {
+export default function NavBar() {
+
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("#home");
@@ -47,7 +49,9 @@ const NavBar = () => {
   }, []);
 
   // Close mobile menu on link click
-  const handleLinkClick = () => setIsOpen(false);
+  const handleLinkClick = (id) => {
+    setShowComponent(true);
+  }
 
   return (
     <motion.nav
@@ -141,10 +145,9 @@ const NavBar = () => {
             />
           </div>
         </button>
-        <ToggleTheme />
+        <ToggleTheme  />
       </SectionWrapper>
       
-
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -201,4 +204,3 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;

@@ -2,17 +2,32 @@ import { lazy, Suspense } from "react";
 import { useEffect, useState, useRef } from 'react';
 
 const sectionsConfig =[
+      {id: 'navbar', Component: lazy(() => import("./components/layout/NavBar"))},
+    {id: 'hero', Component: lazy(() => import("./components/sections/HeroSection"))},
     {id: 'about', Component: lazy(() => import("./components/sections/AboutSection"))},
     {id: 'experience', Component: lazy(() => import("./components/sections/ExperienceSection"))},
     {id: 'projects', Component: lazy(() => import("./components/sections/ProjectsSection"))},
     {id: 'contact', Component: lazy(() => import("./components/sections/ContactSection"))},
-    {id: 'footer', Component: lazy(() => import("./components/layout/Footer"))}
 ]
 
 
 interface UseIntersectionObserverOptions {
   threshold?: number | number[];
   rootMargin?: string;
+}
+
+interface SectionComponentProps {
+  sections?: SectionItem[];
+  
+}
+
+interface SectionItem {
+  id: string;
+  Component: React.ComponentType<SectionComponentProps>;
+}
+interface SectionWrapperProps {
+  Component: React.ComponentType<SectionComponentProps>;
+  sections?: SectionItem[]; 
 }
 
 function useIntersectionObserver(options: UseIntersectionObserverOptions = {}) {
@@ -40,21 +55,27 @@ function useIntersectionObserver(options: UseIntersectionObserverOptions = {}) {
     return [ref, isIntersecting] as const;
 }
 
-export function SectionWrapper({ Component }: { Component: React.ComponentType }) {
+export function SectionWrapper({ Component, sections }: SectionWrapperProps) {
+  console.log(sectionsConfig)
   // Setup Intersection Observer to trigger loading 20px before the section is scrolled into view
   const [ref, isVisible] = useIntersectionObserver({ threshold: 0.01, rootMargin: "20px" });
   const [hasBeenVisible, setHasBeenVisible] = useState(false);
+  const [isNavbar, setIsNavbar] = useState(false);
+
   useEffect(() => {
     if (isVisible) {
+    setIsNavbar(true);
+
       setHasBeenVisible(true);
     }
+
   }, [isVisible]);
 
   return (
-    <div ref={ref} className="min-h-[100px]" style={{ opacity: isVisible ? 1 : 0, transition: 'opacity 1.5s ease-in-out' }}>
-      {hasBeenVisible ? (
+    <div ref={ref} className="min-h-[100px]" style={{ opacity: isVisible || isNavbar ? 1 : 0, transition: 'opacity 1.5s ease-in-out' }}>
+      {hasBeenVisible || isNavbar ? (
         <Suspense fallback={<div className="w-full h-[350px] skeleton rounded-3xl my-8 opacity-20" />}>
-          <Component />
+          <Component sections={sections}/>
         </Suspense>
       ) : (
         <div className="w-full h-[350px] my-8 opacity-0" />
@@ -67,7 +88,7 @@ export default function Home() {
   return (
     <>
       {sectionsConfig.map(({ id, Component }) => (
-        <SectionWrapper Component={Component} />
+        <SectionWrapper key={id} Component={Component} sections={sectionsConfig} />
       ))}
     </>
   );

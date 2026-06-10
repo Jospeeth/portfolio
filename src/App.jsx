@@ -1,6 +1,5 @@
-import NavBar from "./components/layout/NavBar";
 import Home from "./home";  
-import HeroSection from "./components/sections/HeroSection";
+import Footer from "./components/layout/Footer";
 
 /**
  * App — Root layout component assembling all portfolio sections.
@@ -12,10 +11,9 @@ function App() {
       {/* Subtle grid background */}
       <div className="fixed inset-0 bg-grid pointer-events-none opacity-40" />
 
-      <NavBar />
       <main className="relative z-[1]">
-        <HeroSection />
         <Home />
+        <Footer />
       </main>
 
     </div>
