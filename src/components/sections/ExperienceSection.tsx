@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { EXPERIENCES } from "../../utils/data.js";
-import SectionWrapper from "../layout/SectionWrapper.js";
+import { EXPERIENCES } from "../../utils/data";
+import SectionWrapper from "../layout/SectionWrapper";
 
 /**
  * ExperienceSection — Professional timeline with animated reveal.
@@ -61,7 +61,7 @@ const ExperienceSection = () => {
                 {/* Timeline dot */}
                 <div className="absolute left-0 md:left-8 top-6 -translate-x-1/2 z-10">
                   <div className={`w-4 h-4 rounded-full border-2 ${exp.current
-                      ? "bg-primary border-primary shadow-lg shadow-primary/30"
+                      ? "bg-primary border-primary shadow-lg shadow-primary/30 animate-bounce"
                       : "bg-surface border-border"
                     }`} />
                 </div>

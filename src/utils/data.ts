@@ -18,7 +18,7 @@ export const PERSONAL_INFO = {
   name: "Jose Pertuz",
   alias: "jospeeth",
   role: "Software Engineer & IT Engineer",
-  taglines: ["Software Engineer", "FullStack Developer", "React Developer", "IT Engineer"],
+  taglines: ["Software Engineer", "Full Stack", "React Developer", "IT Engineer"],
   email: "japertuzd@gmail.com",
   github: "https://github.com/Jospeeth",
   linkedin: "https://www.linkedin.com/in/josepertuz/",
